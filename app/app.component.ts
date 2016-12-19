@@ -3,13 +3,8 @@ import { Component } from '@angular/core';
 @Component({
 	moduleId: module.id, 
 	selector: 'app',
-	template: `
-
-	<h1>Navigation</h1>
-
-	<router-outlet></router-outlet>
-	`
+	templateUrl: 'app.component.html'
 })
 export class AppComponent {
 	title: 'Freelance Dashboard';
-}
+} 
