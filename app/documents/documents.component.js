@@ -11,6 +11,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var DocumentsComponent = (function () {
     function DocumentsComponent() {
+        this.pageTitle = "Document Dashboard";
+        this.documents = [
+            {
+                title: "My First Doc",
+                description: 'asdfasdf asdfasd',
+                file_url: 'http://google.com',
+                updated_at: '11/11/16',
+                image_url: 'http://google.com',
+            },
+            {
+                title: "My Second Doc",
+                description: 'asdfasdf asdfasd',
+                file_url: 'http://google.com',
+                updated_at: '11/11/16',
+                image_url: 'http://google.com',
+            },
+            {
+                title: "My Last Doc",
+                description: 'asdfasdf asdfasd',
+                file_url: 'http://google.com',
+                updated_at: '11/11/16',
+                image_url: 'http://google.com',
+            }
+        ];
     }
     return DocumentsComponent;
 }());
