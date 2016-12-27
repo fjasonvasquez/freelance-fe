@@ -9,9 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
 var ProposalShowComponent = (function () {
-    function ProposalShowComponent() {
+    function ProposalShowComponent(route) {
+        this.route = route;
     }
+    ProposalShowComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.routeId = this.route.params.subscribe(function (params) {
+            _this.id = +params['id'];
+        });
+    };
     return ProposalShowComponent;
 }());
 ProposalShowComponent = __decorate([
@@ -20,7 +28,7 @@ ProposalShowComponent = __decorate([
         selector: 'proposal-show',
         templateUrl: 'proposal-show.component.html'
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [router_1.ActivatedRoute])
 ], ProposalShowComponent);
 exports.ProposalShowComponent = ProposalShowComponent;
 //# sourceMappingURL=proposal-show.component.js.map
