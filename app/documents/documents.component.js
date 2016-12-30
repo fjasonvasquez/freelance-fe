@@ -43,7 +43,7 @@ DocumentsComponent = __decorate([
         moduleId: module.id,
         selector: 'documents',
         templateUrl: 'documents.component.html',
-        styleUrls: ['documents.component.css']
+        styleUrls: ['documents.component.css'],
     }),
     __metadata("design:paramtypes", [])
 ], DocumentsComponent);
