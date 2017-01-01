@@ -7,6 +7,6 @@ export class Proposal {
 		public estimated_hours?: number,
 		public hourly_rate?: number,
 		public weeks_to_complete?: number,
-		public clietn_email?: string,
+		public client_email?: string,
 		) {}
 }
