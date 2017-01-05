@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Document } from './document';
+import { DocumentService } from './document.service';
 
 @Component({
 	moduleId: module.id,
@@ -10,7 +11,11 @@ import { Document } from './document';
 export class DocumentsComponent implements OnInit {
 	pageTitle: string = "Document Dashboard"
 	
-	documents: Document[] 
-		}
+	documents: Document[];
+	mode = "Observable";
+
+	constructor(
+		private documentService: documentService;
+		)}
 	]
 }
