@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Rx';
 import { Document } from './document';
 import { DocumentService } from './document.service';
 
@@ -7,6 +8,7 @@ import { DocumentService } from './document.service';
 	selector: 'documents',
 	templateUrl: 'documents.component.html',
 	styleUrls: ['documents.component.css'],
+	providers: [ DocumentService ]
 })
 export class DocumentsComponent implements OnInit {
 	pageTitle: string = "Document Dashboard"
@@ -15,11 +17,12 @@ export class DocumentsComponent implements OnInit {
 	mode = "Observable";
 
 	constructor(
-		private documentService: documentService;
-	) {}
+		private documentService: DocumentService;
+		) {}
 
 	ngOnInit() {
-
+		let timer = Observable.timer(0, 5000);
+		timer.subscribe(() => this.getDocuments());
 	}
 
 	getDocuments() {
