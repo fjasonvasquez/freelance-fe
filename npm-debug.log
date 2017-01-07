@@ -7,7 +7,7 @@
 6 silly lifecycle freelance-camp-fe@1.0.0~prestart: no script for prestart, continuing
 7 info lifecycle freelance-camp-fe@1.0.0~start: freelance-camp-fe@1.0.0
 8 verbose lifecycle freelance-camp-fe@1.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle freelance-camp-fe@1.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/felinojasonvasquez/jv/angular-rails/freelance-fe/node_modules/.bin:/Users/felinojasonvasquez/.rvm/gems/ruby-2.3.0/bin:/Users/felinojasonvasquez/.rvm/gems/ruby-2.3.0@global/bin:/Users/felinojasonvasquez/.rvm/rubies/ruby-2.3.0/bin:/Users/felinojasonvasquez/.rvm/bin:/Users/felinojasonvasquez/.rbenv/shims:/Users/felinojasonvasquez/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/felinojasonvasquez/Desktop/nand2tetris/tools
+9 verbose lifecycle freelance-camp-fe@1.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/felinojasonvasquez/jv/angular-rails/freelance-fe/node_modules/.bin:/Users/felinojasonvasquez/.rbenv/shims:/Users/felinojasonvasquez/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/felinojasonvasquez/.rvm/bin:/Users/felinojasonvasquez/Desktop/nand2tetris/tools
 10 verbose lifecycle freelance-camp-fe@1.0.0~start: CWD: /Users/felinojasonvasquez/jv/angular-rails/freelance-fe
 11 silly lifecycle freelance-camp-fe@1.0.0~start: Args: [ '-c', 'tsc && concurrently "tsc -w" "lite-server" ' ]
 12 silly lifecycle freelance-camp-fe@1.0.0~start: Returned: code: 2  signal: null
