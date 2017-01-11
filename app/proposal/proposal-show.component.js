@@ -20,8 +20,12 @@ var ProposalShowComponent = (function () {
         this.route = route;
     }
     ProposalShowComponent.prototype.ngOnInit = function () {
+        var _this = this;
         var proposalRequest = this.route.params
-            .flatMap;
+            .flatMap(function (params) {
+            return _this.proposalService.getProposal(+params['id']);
+        });
+        proposalRequest.subscribe(function (response) { return _this.proposal = response.json(); });
     };
     return ProposalShowComponent;
 }());
