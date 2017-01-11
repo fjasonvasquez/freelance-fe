@@ -21,6 +21,9 @@ var ProposalService = (function () {
             .map(function (response) { return response.json(); })
             .catch(this.handleError);
     };
+    ProposalService.prototype.getProposal = function (id) {
+        return this.http.get(this.proposalsUrl + "/" + id + '.json');
+    };
     ProposalService.prototype.handleError = function (error) {
         var errMsg;
         if (error instanceof http_1.Response) {
