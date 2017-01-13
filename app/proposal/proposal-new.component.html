@@ -124,11 +124,16 @@
 						>
 					</div>
 
+					<button type="submit" class='btn btn-outline-primary btn-lg' [disabled] ="!proposalForm.form.valid" [hidden]="subitted">
+						Generate Proposal
+					</button>
+			
 				</form>
 			</div>
 		</div>
 
 		<div class="col-md-6">
+
 			<div>
 				<p>Hi {{ proposal.customer }},</p>
 
