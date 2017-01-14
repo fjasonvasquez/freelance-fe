@@ -9,6 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var Rx_1 = require("rxjs/Rx");
 var proposal_1 = require("./proposal");
 var proposal_service_1 = require("./proposal.service");
 var ProposalNewComponent = (function () {
@@ -19,6 +20,11 @@ var ProposalNewComponent = (function () {
     }
     ProposalNewComponent.prototype.createProposal = function (proposal) {
         this.submitted = true;
+        this.proposalService.createProposal(proposal)
+            .subscribe(function (data) { return true; }, function (error) {
+            console.log("Error saving proposal");
+            return Rx_1.Observable.throw(error);
+        });
     };
     return ProposalNewComponent;
 }());

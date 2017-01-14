@@ -19,6 +19,14 @@ export class ProposalNewComponent {
 		) {}
 
 	createProposal(proposal) {
-		this.submitted = true
+		this.submitted = true;
+		this.proposalService.createProposal(proposal)
+				.subscribe(
+					data => { return true },
+					error => {
+						console.log("Error saving proposal");
+						return Observable.throw(error);
+					}
+				);
 	}
 }
