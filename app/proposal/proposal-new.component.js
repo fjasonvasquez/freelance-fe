@@ -10,11 +10,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var proposal_1 = require("./proposal");
+var proposal_service_1 = require("./proposal.service");
 var ProposalNewComponent = (function () {
-    function ProposalNewComponent() {
+    function ProposalNewComponent(proposalService) {
+        this.proposalService = proposalService;
         this.proposal = new proposal_1.Proposal;
         this.submitted = false;
     }
+    ProposalNewComponent.prototype.createProposal = function (proposal) {
+        this.submitted = true;
+    };
     return ProposalNewComponent;
 }());
 ProposalNewComponent = __decorate([
@@ -22,9 +27,10 @@ ProposalNewComponent = __decorate([
         moduleId: module.id,
         selector: 'proposal-new',
         templateUrl: 'proposal-new.component.html',
-        styleUrls: ['proposal-new.component.css']
+        styleUrls: ['proposal-new.component.css'],
+        providers: [proposal_service_1.ProposalService]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [proposal_service_1.ProposalService])
 ], ProposalNewComponent);
 exports.ProposalNewComponent = ProposalNewComponent;
 //# sourceMappingURL=proposal-new.component.js.map
